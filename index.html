@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<style>
+		.datepicker{
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 5px;
+			height: 23px;
+			line-height: 24px;
+			width: 230px;
+		}
+
+		.datepicker:focus {
+			outline: 0 none;
+			border: 1px solid #1abc9c;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="datepicker"/>
+	
+
+	<script>
+		//datepicker.init(document.querySelector('.ui-datepicker-wrapper'));
+		datepicker.init('.datepicker');
+
+	</script>
+
+</body>
+</html>
+
+<!--
+	日期对象
+	new Date(year, month-1, date)
+	月份需要减1
+	越界自动进退为
+	getFullYear() 年
+	getMonth()   实际月份-1
+	getDate()  日
+	getDay()   星期
+	当月第一天 new Date(year, month-1, 1)
+	当月最后一天 new Date(year, month, 0)
+	星期一 星期日[1,2,3,4,5,6,0]
+  -->
